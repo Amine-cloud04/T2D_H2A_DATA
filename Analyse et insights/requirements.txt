@@ -1,0 +1,6 @@
+# Fichier requirements.txt
+pandas           # Manipulation et analyse de données
+numpy            # Support mathématique
+streamlit        # Construction du dashboard basique
+matplotlib       # Visualisation (graphiques simples) [cite: 86]
+seaborn          # Amélioration esthétique des graphiques

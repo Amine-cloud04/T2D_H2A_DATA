@@ -1,0 +1,59 @@
+# [T2D] POC 1 - Analyse Quantitative et Statistique des Formations
+
+## Objectif du POC (POC 1)
+Démontrer la faisabilité d'une solution d'analyse statistique des évaluations "à chaud" pour transformer les données brutes en insights actionnables, tout en respectant les contraintes de sécurité et de déploiement.
+
+## Périmètre Couvert (Quantitative & Stats)
+* **Analyse Quantitative & Statistique :**
+    * Calcul des scores moyens par critère (Satisfaction, Contenu, Logistique, Applicabilité).
+    * Calcul des scores moyens par type de formation (Lean, SAP, Processus Métier...).
+    * Analyse de l'évolution temporelle de la satisfaction.
+* **Génération d'Insights :** Identification automatique des signaux faibles (critère le plus bas, forte dispersion).
+* **Visualisation :** Dashboard basique créé avec Streamlit (graphiques simples et tableau de synthèse).
+
+## Technologies Utilisées
+* **Langage :** Python 3.x
+* **Analyse de Données :** Pandas, NumPy
+* **Visualisation/Dashboard :** Streamlit, Matplotlib, Seaborn
+
+## Instructions de Lancement
+Suivez ces étapes pour lancer le Proof of Concept localement :
+
+1.  **Prérequis :** Assurez-vous d'avoir Python 3.8+ et le fichier `evaluation_formation.csv` placé à la racine du dossier `t2d_project`.
+
+2.  **Accédez au dossier du projet** :
+    ```bash
+    cd t2d_project
+    ```
+
+3.  **Créez et activez l'environnement virtuel** :
+    ```bash
+    # Windows
+    python -m venv t2d_env
+    .\t2d_env\Scripts\activate
+    
+    # Linux / macOS
+    python3 -m venv t2d_env
+    source t2d_env/bin/activate
+    ```
+
+4.  **Installez les dépendances** :
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5.  **Lancez l'application Streamlit (POC 1)** :
+    ```bash
+    streamlit run app_analysis.py
+    ```
+    L'application s'ouvrira automatiquement dans votre navigateur par défaut.
+
+## Limites du POC
+* Utilisation de données fictives à faible volumétrie (15 lignes).
+* La logique d'insight est basée sur des calculs statistiques simples (moyen/min/std) et non sur une modélisation complexe.
+* La partie NLP (analyse des commentaires) n'est pas couverte dans ce module.
+
+## Vision d'Évolution vers Production (Architecture & Sécurité)
+* **Séparation des Composants :** Le code d'analyse (`data_processor.py`) est isolé de l'interface (`app_analysis.py`), permettant une migration facile vers des microservices.
+* **Architecture Proposée :** Un service d'analyse dédié (ex: conteneur Docker exécutant FastAPI) qui reçoit des données anonymisées, exécute l'analyse, et expose les résultats via des **API sécurisées** au front-end Streamlit/web.
+* **Sécurité/Confidentialité :** Le système est conçu sans **aucun accès direct au SI Safran**. Toutes les données sensibles (si elles étaient réelles) seraient soumises à une étape stricte **d'anonymisation en amont** avant d'entrer dans le module d'analyse.
