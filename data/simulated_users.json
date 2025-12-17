@@ -1,0 +1,38 @@
+[
+  {
+    "user_id": "EMP001",
+    "name": "Jean Martin",
+    "profil": "CDI",
+    "contract_type": "CDI",
+    "employee_category": "Non-Cadre",
+    "department": "Production",
+    "simulated_auth_token": "token_cdi_123"
+  },
+  {
+    "user_id": "EMP002",
+    "name": "Marie Curie",
+    "profil": "Cadre",
+    "contract_type": "CDI",
+    "employee_category": "Cadre",
+    "department": "R&D",
+    "simulated_auth_token": "token_cadre_456"
+  },
+  {
+    "user_id": "EMP003",
+    "name": "Karim Alaoui",
+    "profil": "CDD",
+    "contract_type": "CDD",
+    "employee_category": "Non-Cadre",
+    "department": "Logistique",
+    "simulated_auth_token": "token_cdd_789"
+  },
+  {
+    "user_id": "EMP004",
+    "name": "Sophie Apprentie",
+    "profil": "Stagiaire",
+    "contract_type": "Stage",
+    "employee_category": "Stagiaire",
+    "department": "RH",
+    "simulated_auth_token": "token_stagiaire_101"
+  }
+]
