@@ -1,9 +1,14 @@
-# main_app.py
 import streamlit as st
-from chatbot_rh_safran.app import run as run_chatbot
-import importlib.util
-import os
 import sys
+import os
+import importlib.util
+
+# --- ADD CHATBOT FOLDER TO PATH ---
+chatbot_folder = os.path.join(os.getcwd(), "chatbot_rh_safran")
+if chatbot_folder not in sys.path:
+    sys.path.insert(0, chatbot_folder)
+
+from chatbot_rh_safran.app import run as run_chatbot
 
 # --- DYNAMIC IMPORT FOR "Analyse et insights" ---
 analysis_folder = os.path.join(os.getcwd(), "Analyse et insights")
