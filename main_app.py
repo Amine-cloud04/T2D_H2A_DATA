@@ -1,7 +1,7 @@
 # main_app.py
 import streamlit as st
-from chatbot.app import run as run_chatbot
-from analysis.app import run as run_analysis
+from chatbot_rh_safran.app import run as run_chatbot
+from 'Analyse et insights'.app import run as run_analysis
 
 # --- SINGLE PAGE CONFIG ---
 st.set_page_config(
