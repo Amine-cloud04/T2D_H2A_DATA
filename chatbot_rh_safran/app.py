@@ -10,14 +10,6 @@ def run():
     os.environ["STREAMLIT_SERVER_ENABLE_FILE_WATCHER"] = "false"
     logger = logging.getLogger(__name__)
 
-    # Configuration de la page
-    st.set_page_config(
-        page_title="Safran RH Assistant POC",
-        page_icon="🤖",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
-
 
     # Initialisation avec cache pour performance
     @st.cache_resource
