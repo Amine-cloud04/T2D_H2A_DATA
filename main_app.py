@@ -1,7 +1,19 @@
 # main_app.py
 import streamlit as st
 from chatbot_rh_safran.app import run as run_chatbot
-from 'Analyse et insights'.app import run as run_analysis
+import importlib.util
+import os
+import sys
+
+# --- DYNAMIC IMPORT FOR "Analyse et insights" ---
+analysis_folder = os.path.join(os.getcwd(), "Analyse et insights")
+analysis_app_path = os.path.join(analysis_folder, "app.py")
+
+spec = importlib.util.spec_from_file_location("run_analysis", analysis_app_path)
+run_analysis_module = importlib.util.module_from_spec(spec)
+sys.modules["run_analysis"] = run_analysis_module
+spec.loader.exec_module(run_analysis_module)
+run_analysis = run_analysis_module.run
 
 # --- SINGLE PAGE CONFIG ---
 st.set_page_config(
