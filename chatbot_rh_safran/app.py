@@ -42,13 +42,6 @@ def run():
 
         # Sidebar - Configuration et informations
         with st.sidebar:
-            st.image(
-                "https://upload.wikimedia.org/wikipedia/fr/thumb/6/6e/Logo_Safran.svg/1280px-Logo_Safran.svg.png",
-                width=200,
-                caption="POC - Think to Deploy",
-            )
-
-            st.markdown("---")
 
             # Simulation d'authentification
             st.subheader("🔐 Simulation d'Authentification")
