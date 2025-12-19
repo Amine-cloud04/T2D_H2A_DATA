@@ -1,0 +1,12 @@
+venv/
+
+logs/
+*.log
+
+data/temp/
+
+__pycache__/
+*.pyc
+
+.env
+.streamlit/
