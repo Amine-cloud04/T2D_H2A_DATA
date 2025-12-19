@@ -15,3 +15,4 @@ joblib>=1.3.0
 
 # If your analysis code uses datetime parsing or others
 python-dateutil>=2.9.0
+plotly
