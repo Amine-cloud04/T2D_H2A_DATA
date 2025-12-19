@@ -1,0 +1,11 @@
+question_id,profil,domaine,question,reponse
+1,CDI,Congés,Comment poser un congé annuel ?,La demande se fait via le portail RH au moins 7 jours à l’avance
+2,CDD,Congés,Ai-je droit aux congés payés ?,Oui proportionnellement à la durée du contrat
+3,Intérim,Avantages,Ai-je accès au transport ?,Selon les disponibilités définies par l’entreprise
+4,Cadre,Temps de travail,Comment déclarer des heures supplémentaires ?,Via le manager et le portail RH
+5,Non-Cadre,Temps de travail,Comment fonctionne le pointage ?,Par badgeuse à l’entrée et à la sortie
+6,CDI,Paie,Quand est versé le salaire ?,À la fin de chaque mois
+7,CDD,Paie,Puis-je consulter mon bulletin de paie ?,Oui via le portail RH sécurisé
+8,Stagiaire,Avantages,Ai-je accès à la cantine ?,Oui les stagiaires y ont accès
+9,CDI,Transport,Comment s’inscrire au transport ?,Via le service RH
+10,Cadre,Congés,Comment demander un congé exceptionnel ?,Validation manager puis RH
