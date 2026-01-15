@@ -11,8 +11,8 @@ if chatbot_folder not in sys.path:
 from chatbot_rh_safran.app import run as run_chatbot
 
 # --- DYNAMIC IMPORT FOR "Analyse et insights" ---
-analysis_folder = os.path.join(os.getcwd(), "Analyse et insights")
-analysis_app_path = os.path.join(analysis_folder, "app.py")
+analysis_folder = os.path.join(os.getcwd(), "Analyse IA des Évaluations")
+analysis_app_path = os.path.join(analysis_folder, "app_hassan.py")
 
 spec = importlib.util.spec_from_file_location("run_analysis", analysis_app_path)
 run_analysis_module = importlib.util.module_from_spec(spec)
